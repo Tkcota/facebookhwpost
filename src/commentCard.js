@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-const Card = (props) => {
+const commentCard = (props) => {
 
 
   let [likes, setVotes] = useState(0);
@@ -20,7 +20,7 @@ const Card = (props) => {
 
   let [showThing, setShowThing] = useState(false);
 
-  let commentSection = ['HAHAHA THATS SO FUNNY', 'YES IM TOTALLY IN', 'NO NEVER!', 'Are you serious!', 'No Thanks!', 'Lets do it!']
+  let commentSection = ['HAHAHA THATS SO FUNNY', 'YES IM TOTALLY IN', 'NO NEVER!']
 
 
 
@@ -39,7 +39,7 @@ const Card = (props) => {
         <button onClick={like}>like</button>
         <button onClick={dislike}>dislike</button>
         <div></div>
-        {showThing && <p>{commentSection[randomIntFromInterval(0, 5)]}</p>}
+        {showThing && <p>{commentSection[randomIntFromInterval(0, 2)]}</p>}
         <button
           onClick={() => {
             setShowThing(!showThing)
@@ -55,4 +55,4 @@ const Card = (props) => {
 
 
 
-export default Card
+export default commentCard
